@@ -1,6 +1,6 @@
 # 🚀 React Signup Template
 
-A modern React signup page template built with Vite, React, and TailwindCSS.
+A modern React signup page template built with Vite, React, and TailwindCSS. This template provides a ready-to-use authentication interface with newsletter subscription capabilities, perfect for SaaS applications and web platforms. Featuring a responsive design and modular components, it can be easily customized to match your brand's identity.
 
 ## ✨ Features
 
