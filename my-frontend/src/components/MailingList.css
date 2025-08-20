@@ -1,0 +1,202 @@
+/* Container */
+.mailing-container {
+  width: 100%;
+  background: linear-gradient(to left, #404040 0%, #66595b 100%);
+  display: flex;
+  justify-content: center;
+  padding: 0%;
+}
+
+/* Wrapper - max width 1440px for desktop */
+.mailing-wrapper {
+  width: 100%;
+  max-width: 1440px;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: #fff;
+}
+
+/* Headings */
+.mailing-title {
+  font-size: 48px;
+  font-weight: 400;
+}
+
+.mailing-subtitle {
+  margin-top: 0.5rem;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+/* Form */
+.mailing-form {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.mailing-input-wrapper {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #5b5757 0%, #433f3e 100%);
+  border-radius: 9999px;
+  overflow: hidden;
+  width: 400px;
+  max-width: 600px;
+  border: 1px solid #c7dbd2;
+}
+
+.mailing-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  color: #e5e7eb;
+}
+
+.mailing-input::placeholder {
+  color: #ddd;
+}
+
+.mailing-btn {
+  padding: 0.75rem 1.5rem;
+  background: #fff;
+  color: #000;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  height: 100%;
+  border-radius: 30px;
+}
+
+.mailing-btn:hover {
+  background: #ddd;
+}
+
+/* Options */
+.mailing-options {
+  margin-top: 2.5rem;
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+}
+
+.mailing-option p {
+  margin-bottom: 0.5rem;
+}
+
+/* Buttons */
+.referrer-btn {
+  padding: 15px;
+  border-radius: 9999px;
+  background: #483c3e;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+  width: 200px;
+  border: 1px solid #d8cfd0;
+}
+
+.referrer-btn:hover {
+  background: #666;
+}
+
+.talent-btn {
+  padding: 15px;
+  border-radius: 9999px;
+  border: 1px solid #e63946;
+  color: red;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.2s;
+  width: 200px;
+  font-size: 14px;
+  border-radius: 9999px;
+  border: 1px solid #ff7979;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.talent-btn:hover {
+  background: #e63946;
+  color: #fff;
+}
+
+.coming-btn {
+  padding: 15px;
+  border-radius: 9999px;
+  background: #686868;
+  color: #fff;
+  border: none;
+  cursor: not-allowed;
+  width: 200px;
+  border: 1px solid #737373;
+  font-size: 14px;
+  border-radius: 9999px;
+  border: 1px solid var(--Grey-Linear, rgba(0, 0, 0, 0));
+  background: var(
+    --Grey-Linear,
+    radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(173, 173, 173, 0.1) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    ),
+    linear-gradient(
+      282deg,
+      rgba(0, 0, 0, 0) 5.18%,
+      rgba(203, 203, 203, 0.3) 99.79%
+    )
+  );
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+  .mailing-options {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.btn-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.btn-tooltip {
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff4f4;
+  color: #d8000c;
+  padding: 6px 12px;
+  border: 1px solid #ffbaba;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+/* Little arrow under the tooltip */
+.btn-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #fff4f4 transparent transparent transparent;
+}

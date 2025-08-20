@@ -1,0 +1,329 @@
+body,
+input,
+button,
+label,
+p,
+a,
+span,
+div {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.signup-section {
+  width: 100%;
+  min-height: 120vh;
+  background: linear-gradient(
+      90deg,
+      rgba(242, 196, 206, 0) 0%,
+      rgba(199, 219, 210, 0) 100%
+    ),
+    #000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.signup-wrapper {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.signup-heading {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 3rem;
+  color: #fff;
+  font-style: normal;
+}
+
+.signup-tabs {
+  display: flex;
+  justify-content: space-around;
+  gap: 100px;
+  padding: 0.5rem;
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  border-bottom: 1px solid #e5e7eb;
+  position: relative;
+}
+
+.signup-tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 16px 16px;
+  font-size: 18px;
+  border: none;
+  height: 60px;
+  background: transparent;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.signup-tab.active {
+  display: flex;
+  padding: 0 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex: 1 0 0;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 3px solid #facc15;
+  background: var(
+    --Grey-Linear,
+    radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(173, 173, 173, 0.1) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    ),
+    linear-gradient(
+      282deg,
+      rgba(0, 0, 0, 0) 5.18%,
+      rgba(203, 203, 203, 0.3) 99.79%
+    )
+  );
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.25);
+}
+
+.signup-card {
+  margin-top: 2rem;
+  padding: 2rem;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 16px;
+  border: 4px solid var(--LInear-2, rgba(255, 145, 145, 0.8));
+  background: var(
+    --Grey-Linear,
+    radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(173, 173, 173, 0.1) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    ),
+    linear-gradient(
+      282deg,
+      rgba(0, 0, 0, 0) 5.18%,
+      rgba(203, 203, 203, 0.3) 99.79%
+    )
+  );
+}
+
+.signup-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.signup-grid input {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: 9999px;
+  border: 1px solid #c7dbd2;
+  background: var(
+    --Grey-Linear,
+    radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(173, 173, 173, 0.1) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    ),
+    linear-gradient(
+      282deg,
+      rgba(0, 0, 0, 0) 5.18%,
+      rgba(203, 203, 203, 0.3) 99.79%
+    )
+  );
+}
+
+.signup-grid input::placeholder {
+  color: #e5e5e5;
+  opacity: 0.85;
+}
+
+.signup-checkbox {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.input-checkbox {
+  height: 24px;
+  width: 24px;
+  border-radius: 10px;
+  border: 1px solid #c7dbd2;
+
+  appearance: none; /* ✅ removes default OS checkbox */
+  -webkit-appearance: none; /* Safari */
+  -moz-appearance: none; /* Firefox */
+
+  background: var(
+    --Grey-Linear,
+    radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(173, 173, 173, 0.1) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    ),
+    linear-gradient(
+      282deg,
+      rgba(0, 0, 0, 0) 5.18%,
+      rgba(203, 203, 203, 0.3) 99.79%
+    )
+  );
+
+  cursor: pointer;
+}
+
+/* When checked */
+.input-checkbox:checked {
+  background: #37d975;
+  border-color: #c3f0d4;
+  position: relative;
+}
+
+/* Add a ✓ tick mark */
+.input-checkbox:checked::after {
+  content: "✓";
+  position: absolute;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+}
+
+.terms-text {
+  color: var(--White, #fff);
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 26px */
+  text-transform: capitalize;
+  margin-top: 40px;
+  width: 600px;
+}
+
+.icon {
+  font-size: 18px;
+}
+
+.signup-btn {
+  margin-top: 2rem;
+  display: flex;
+  width: 300px;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 9999px;
+  border: 0 solid #e5e7eb;
+  background: #fff;
+  color: #1f2937;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.signup-btn:hover {
+  background: #ffffff;
+}
+
+.signup-login {
+  margin-top: 1.5rem;
+  text-align: left;
+  font-size: 13px;
+  color: #ffffff;
+  color: var(--White, #fff);
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 28.6px */
+  text-transform: capitalize;
+}
+
+.signup-login a {
+  text-decoration: underline;
+  color: #ffffff;
+}
+/* Password field wrapper */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 45px; /* space for eye icon */
+}
+
+/* Eye icon inside input */
+.password-toggle {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #e5e5e5;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .signup-tabs {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .signup-tab {
+    flex: unset;
+    width: 45%;
+  }
+  .signup-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .signup-tabs {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .signup-tab {
+    width: 100%;
+    justify-content: center;
+  }
+  .signup-grid {
+    grid-template-columns: 1fr;
+  }
+  .signup-heading {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
